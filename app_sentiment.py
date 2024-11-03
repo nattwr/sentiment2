@@ -6,10 +6,10 @@ with open('sentiment_pipeline_model.pkl', 'rb') as file:
     sentiment_pipeline = pickle.load(file)
 
 # Streamlit app
-st.title("Thai Sentiment Analysis")
+st.title("Sentiment Analysis")
 
 # Text input for sentiment analysis
-text_input = st.text_area("Enter Thai text for sentiment analysis", "ขอความเห็นหน่อย...")
+text_input = st.text_area("Enter text for sentiment analysis")
 
 if st.button("Analyze Sentiment"):
     # Predict sentiment
@@ -26,5 +26,5 @@ if st.button("Analyze Sentiment"):
         st.error(f"Negative Sentiment")
         st.progress(1.0)
     else:
-        st.warning(f"Neutral Sentiment")
+        st.warning(f"Neutral Sentiment{sentiment}.")
         st.progress(1.0)
