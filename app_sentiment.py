@@ -19,12 +19,9 @@ if st.button("Analyze Sentiment"):
     # Display result as progress bars
     st.subheader("Sentiment Analysis Result:")
 
-    if sentiment == 'pos':
+    if sentiment == 'positive':
         st.success(f"Positive Sentiment")
-        st.progress(1.0)
-    elif sentiment == 'neg':
+    elif sentiment == 'negative':
         st.error(f"Negative Sentiment")
-        st.progress(1.0)
     else:
-        st.warning(f"Neutral Sentiment{sentiment}.")
-        st.progress(1.0)
+        st.warning(f"Neutral Sentiment.")
